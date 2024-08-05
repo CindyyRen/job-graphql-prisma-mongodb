@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "@apollo/server": "^4.10.5",
+    "@faker-js/faker": "^8.4.1",
+    "@prisma/client": "^5.17.0",
+    "express": "^4.19.2",
+    "graphql": "^16.9.0",
+    "mongodb": "^6.8.0",
+    "nanoid": "^5.0.1",
+    "prisma": "^5.17.0"
+  },
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.1.0"
+  }
+}

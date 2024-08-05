@@ -1,0 +1,54 @@
+type Company {
+  id: ID!
+  name: String!
+  description: String
+  jobs: [Job!]!
+}
+
+# Define the Job type
+type Job {
+  id: ID!
+  slug: String!
+  title: String!
+  type: String!
+  locationType: String!
+  location: String
+  description: String
+  salary: Int!
+  companyName: String!
+  applicationEmail: String
+  applicationUrl: String
+  companyLogoUrl: String
+  approved: Boolean!
+  createdAt: String!
+  updatedAt: String!
+  company: Company!
+}
+
+type Query {
+  company(id: ID!): Company
+  job(id: ID!): Job
+  jobs(limit: Int, offset: Int): JobSubList
+}
+
+type Mutation {
+  createJob(input: CreateJobInput!): Job
+  deleteJob(id: ID!): Job
+  updateJob(input: UpdateJobInput!): Job
+}
+
+type JobSubList {
+  items: [Job!]!
+  totalCount: Int!
+}
+
+input CreateJobInput {
+  title: String!
+  description: String
+}
+
+input UpdateJobInput {
+  id: ID!
+  title: String!
+  description: String
+}
