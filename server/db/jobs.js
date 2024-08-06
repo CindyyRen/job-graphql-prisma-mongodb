@@ -13,3 +13,8 @@ export async function countJobs() {
   const count = await prisma.job.count();
   return count;
 }
+export async function getJob(id) {
+  const job=await prisma.job.findFirst({where:{id:id}})
+  return job
+  
+}
